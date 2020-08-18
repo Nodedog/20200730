@@ -1,0 +1,45 @@
+/*
+*
+*                   方法的重载
+*
+*
+*   1.方法名相同
+    2.方法的参数不同(参数个数或者参数类型)
+    3.方法的返回值类型不影响重载.
+*
+*
+*
+*
+* */
+
+class Test4 {
+    public static void main(String[] args) {
+        int a = 10;
+        int b = 20;
+        int ret = add(a, b);
+        System.out.println("ret = " + ret);
+
+        double a2 = 10.5;
+        double b2 = 20.5;
+        double ret2 = add(a2, b2);
+        System.out.println("ret2 = " + ret2);
+
+        double a3 = 10.5;
+        double b3 = 10.5;
+        double c3 = 20.5;
+        double ret3 = add(a3, b3, c3);
+        System.out.println("ret3 = " + ret3);
+    }
+
+    public static int add(int x, int y) {
+        return x + y;
+    }
+
+    public static double add(double x, double y) {
+        return x + y;
+    }
+
+    public static double add(double x, double y, double z) {
+        return x + y + z;
+    }
+}
